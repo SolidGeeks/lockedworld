@@ -12,7 +12,7 @@
 <meta property="og:title" content="The Locked World · Solid Geeks">
 <meta property="og:description" content="Libère la ville verrouillée par Lockware. Chaque niveau, une nouvelle façon de jouer.">
 <meta property="og:url" content="https://solidgeeks.github.io/lockedworld/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 22'%3E%3Crect width='26' height='22' fill='%230d0f0c'/%3E%3Cpath d='M8 2H5v7l-3 2 3 2v7h3M18 2h3v7l3 2-3 2v7h-3M13 4v14' fill='none' stroke='%23c8f520' stroke-width='2.6'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 22'%3E%3Crect width='26' height='22' fill='%230d0f0c'/%3E%3Cpath d='M8 2H5v7l-3 2 3 2v7h3M18 2h3v7l3 2-3 2v7h-3M13 4v14' fill='none' stroke='%23C8FF2E' stroke-width='2.6'/%3E%3C/svg%3E">
 <style>
 html,body{margin:0}
 :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;height:100%}
@@ -25,7 +25,7 @@ html,body{margin:0}
 :root{
   --bg:#0d0f0c; --bg2:#0b0d0a; --panel:#141711; --line:#2a2e25; --line2:#3a3f33;
   --fg:#eef1e8; --muted:#a2a898; --dim:#61685a;
-  --lime:#c8f520; --ink:#0a0b09; --red:#ff5d4f; --amber:#ffb547;
+  --lime:#C8FF2E; --ink:#0a0b09; --red:#ff5d4f; --amber:#ffb547;
   --display:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   color-scheme:dark;
@@ -169,7 +169,7 @@ kbd{font-family:var(--display);font-size:.85em;border:1px solid var(--line2);bor
 <div id="app">
   <header class="hud">
     <div class="logo" aria-label="Solid Geeks">
-      <svg viewBox="0 0 26 22" aria-hidden="true"><path d="M8 2H5v7l-3 2 3 2v7h3M18 2h3v7l3 2-3 2v7h-3M13 4v14" fill="none" stroke="#c8f520" stroke-width="2.6"/></svg>
+      <svg viewBox="0 0 26 22" aria-hidden="true"><path d="M8 2H5v7l-3 2 3 2v7h3M18 2h3v7l3 2-3 2v7h-3M13 4v14" fill="none" stroke="#C8FF2E" stroke-width="2.6"/></svg>
       <span>solid geeks</span>
     </div>
     <div class="obj" id="obj" aria-live="polite">The Locked World</div>
@@ -202,10 +202,10 @@ kbd{font-family:var(--display);font-size:.85em;border:1px solid var(--line2);bor
 const $ = s => document.querySelector(s);
 const stage = $('#stage'), cv = $('#cv'), ctx = cv.getContext('2d'), fx = $('#fx'), menu = $('#menu');
 const mini = $('#mini'), mctx = mini.getContext('2d');
-const C = { bg:'#0d0f0c', fg:'#eef1e8', muted:'#a2a898', dim:'#61685a', line:'#2a2e25', lime:'#c8f520', red:'#ff5d4f', amber:'#ffb547', blue:'#8fd3ff', violet:'#c49bff' };
+const C = { bg:'#0d0f0c', fg:'#eef1e8', muted:'#a2a898', dim:'#61685a', line:'#2a2e25', lime:'#C8FF2E', red:'#ff5d4f', amber:'#ffb547', blue:'#8fd3ff', violet:'#c49bff' };
 const la = a => `rgba(200,245,32,${a})`;
 const MONO = '"JetBrains Mono", ui-monospace, Menlo, monospace';
-const LINKS = { site:'https://solidgeeks.github.io/SolidGeeks/', discord:'https://discord.gg/F9g5YFBzwY', github:'https://github.com/0b3l1X-SolidGeeks' };
+const LINKS = { site:'https://solidgeeks.github.io/SolidGeeks/', discord:'https://discord.gg/F9g5YFBzwY', github:'https://github.com/SolidGeeks' };
 const RMQ = matchMedia('(prefers-reduced-motion: reduce)');
 const COARSE = matchMedia('(pointer: coarse)');
 let RM = RMQ.matches;
@@ -1429,7 +1429,7 @@ function padlock(c, x, y, s=1, col='#6a7063'){
 }
 const faceImgs = {};
 function drawFaceSprite(c, k, r){
-  if (!faceImgs[k]){ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><style>.l{fill:#c8f520}.ls{stroke:#c8f520}.w{fill:#eef1e8}.ws{stroke:#eef1e8}.head{fill:#1f231b;stroke:#3d4236;stroke-width:1.5}.body{fill:#151812;stroke:#2c3027;stroke-width:1.5}.hood{fill:#121410;stroke:#2c3027;stroke-width:1.5}.dk{fill:#060705}.mt{stroke:#6f7667}.fs{stroke:#c9cdc1}.ct{fill:#2b2f27}.cr{fill:#171a14}.gr{fill:#2a2e25}</style>${FACES[k]}</svg>`;
+  if (!faceImgs[k]){ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><style>.l{fill:#C8FF2E}.ls{stroke:#C8FF2E}.w{fill:#eef1e8}.ws{stroke:#eef1e8}.head{fill:#1f231b;stroke:#3d4236;stroke-width:1.5}.body{fill:#151812;stroke:#2c3027;stroke-width:1.5}.hood{fill:#121410;stroke:#2c3027;stroke-width:1.5}.dk{fill:#060705}.mt{stroke:#6f7667}.fs{stroke:#c9cdc1}.ct{fill:#2b2f27}.cr{fill:#171a14}.gr{fill:#2a2e25}</style>${FACES[k]}</svg>`;
     const im = new Image(); im.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg); faceImgs[k] = im; }
   const im = faceImgs[k]; if (im.complete && im.naturalWidth) c.drawImage(im, -r, -r, r*2, r*2);
 }
