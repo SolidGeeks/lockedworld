@@ -1,35 +1,37 @@
 # The Locked World
 
-Un shooter vu de dessus, en 10 niveaux, qui tourne dans le navigateur. Lockware a verrouillé la ville : libère-la avec l'équipage Solid Geeks (Term, Rep, Brax, Null, Bit, Atlas, Brick).
+A top-down shooter in 10 levels that runs in the browser. Lockware has locked the city: free it with the Solid Geeks crew (Term, Rep, Brax, Null, Bit, Atlas, Brick).
 
-**Jouer :** https://solidgeeks.github.io/lockedworld/
+**Play:** https://solidgeeks.github.io/lockedworld/
 
-| Niveau | Mécanique | Équipier gagné |
+**The game is in French.** Level names below are the ones you see on screen, with a translation.
+
+| Level | Mechanic | Teammate won |
 |---|---|---|
-| 1. Marais du Presque-Fini | Brouillard, capture de 4 Orphelins | Bit · tir triple |
-| 2. Gymnase CI | Arène, 5 vagues, combos | Rep · cadence |
-| 3. Ada-Lovelace | Escorte du camion de cantine | Atlas · blindage |
-| 4. Étages de Lockware | Infiltration dans le noir | Null · esquive fantôme |
-| 5. Chantier Strata | Défense puis boss Lockware | Brick · tourelles |
-| 6. Discord des nouveaux | Protéger 30 nouveaux venus | Term · bouclier d'accueil (R) |
-| 7. Archives SPDX | Munitions de licence (1, 2, 3) et boss | Atlas · double licence |
-| 8. Réseau de Strata | Aiguillages de paquets | Brax overclocké |
-| 9. Arbre des dépendances | Défilement vertical, typosquats, boss déguisé | Null · audit perforant |
-| 10. La Fuite | Poursuite d'un voleur de clé, rotation des secrets | Null · course |
+| 1. Marais du Presque-Fini *(the Almost-Done Swamp)* | Fog, rescue 4 Orphans | Bit · triple shot |
+| 2. Gymnase CI *(the CI Gym)* | Arena, 5 waves, combos | Rep · fire rate |
+| 3. Ada-Lovelace *(the Ada Lovelace district)* | Escort the canteen truck | Atlas · armour |
+| 4. Étages de Lockware *(Lockware's floors)* | Stealth in the dark | Null · ghost dodge |
+| 5. Chantier Strata *(the Strata building site)* | Defence, then the Lockware boss | Brick · turrets |
+| 6. Discord des nouveaux *(the newcomers' Discord)* | Protect 30 newcomers | Term · welcome shield (R) |
+| 7. Archives SPDX *(the SPDX Archives)* | License ammo (1, 2, 3) and a boss | Atlas · dual license |
+| 8. Réseau de Strata *(the Strata network)* | Switch the packets' routes | Brax, overclocked |
+| 9. Arbre des dépendances *(the dependency tree)* | Vertical scrolling, typosquats, a disguised boss | Null · piercing audit |
+| 10. La Fuite *(the Leak)* | Chase a key thief, rotate the secrets | Null · sprint |
 
-## Commandes
+## Controls
 
-- Bouger : ZQSD, WASD ou flèches
-- Viser et tirer : souris, clic maintenu (F pour la visée auto)
-- Esquive : Espace · Tourelle : E · Bouclier : R · Licence : 1, 2, 3 · Pause : P ou Échap
-- Tactile : pouce gauche pour bouger, pouce droit pour viser
+- Move: ZQSD, WASD or the arrow keys
+- Aim and shoot: mouse, hold the button (F for auto-aim)
+- Dodge: Space · Turret: E · Shield: R · License: 1, 2, 3 · Pause: P or Esc
+- Touch: left thumb to move, right thumb to aim
 
-## Technique
+## How it is built
 
-Un seul fichier `index.html`, sans build ni dépendance : Canvas 2D, son synthétisé avec Web Audio, sauvegarde de la progression dans le navigateur (`localStorage`). Seules les polices viennent de Google Fonts.
+One `index.html` file, no build step, no dependencies: Canvas 2D, sound synthesized with Web Audio, progress saved in the browser (`localStorage`). Only the fonts come from Google Fonts.
 
-Pour tester en local : ouvre `index.html` dans un navigateur, ou lance `python3 -m http.server` dans ce dossier puis va sur http://localhost:8000.
+To try it locally: open `index.html` in a browser, or run `python3 -m http.server` in this folder and go to http://localhost:8000.
 
-## Contribuer
+## Contributing
 
-Les contributions suivent le Solid standard : commits signés avec `git commit -s` (DCO), pas de CLA. Le code est sous licence AGPL-3.0-or-later.
+Contributions follow the [Solid standard](https://github.com/SolidGeeks/.github/blob/main/CONTRIBUTING.md): sign off every commit with `git commit -s` (DCO), no CLA. The code is licensed [AGPL-3.0-or-later](LICENSE). To report a vulnerability, see [SECURITY.md](SECURITY.md).
