@@ -32,6 +32,16 @@ One `index.html` file, no build step, no dependencies: Canvas 2D, sound synthesi
 
 To try it locally: open `index.html` in a browser, or run `python3 -m http.server` in this folder and go to http://localhost:8000.
 
+To run the tests (Node.js 22 or later; the game itself needs nothing, Playwright is only for the tests):
+
+```bash
+npm install
+npx playwright install chromium   # once
+npm test                          # the game loads, and each of the 10 levels starts and runs without an error
+```
+
+Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+
 ## Contributing
 
 Contributions follow the [Solid standard](https://github.com/SolidGeeks/.github/blob/main/CONTRIBUTING.md): sign off every commit with `git commit -s` (DCO), no CLA. The code is licensed [AGPL-3.0-or-later](LICENSE). To report a vulnerability, see [SECURITY.md](SECURITY.md).
